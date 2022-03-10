@@ -15,14 +15,18 @@
             </div>
             <div class="form_body">
                 <form class="authorize_form" action="get">
-                    <label>
-                        <p class="input-text">Введите имя</p>
-                        <input class="inpt" id="inputName" id="username" type="text" required>
-                    </label>
-                    <label>
-                        <p class="input-text">Введите пароль</p>
-                        <input class="inpt" id="password" type="password" required>
-                    </label>
+                    <div class="input-wrap">
+                        <label>
+                            <p class="input-text">Введите имя</p>
+                            <input class="inpt" id="inputName" id="username" type="text" required>
+                        </label>
+                    </div>
+                    <div class="input-wrap">
+                        <label>
+                            <p class="input-text">Введите пароль</p>
+                            <input class="inpt" id="password" type="password" required>
+                        </label>
+                    </div>
                     <button class="btn">
                         Log in
                     </button>
@@ -30,6 +34,7 @@
             </div>
         </div>
     </div>
+    <script src="JS/input-animate.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

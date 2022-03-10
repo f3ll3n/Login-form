@@ -63,10 +63,10 @@ html body {
   font-family: sans-serif;
   font-size: 17px;
   width: 100%;
+  padding: 0 0 0 15px;
   font-weight: 400;
   border-radius: 25px;
   height: 40px;
-  padding: 0 0 0 15px;
   border: 0px;
   margin-right: 10px;
   color: #ffffff;
@@ -80,40 +80,35 @@ html body {
 .authorize_wrap .form_body .authorize_form input:focus{
   border: 2px solid rgb(124, 124, 124);
 }
-
 .authorize_wrap .form_body .authorize_form .active{
   background-color: red;
 }
+.input-wrap{
+  padding: 40px 5px 25px 5px;
+  max-width: 500px;
+  width: 95%;
+  margin: 0 auto;
+}
 .authorize_wrap .form_body .authorize_form label{
   border-radius: 0;
-  padding: 15px 5px 10px 5px;
+  height: 35px;
   box-sizing: border-box;
-  max-width: 500px;
   width: 100%;
   margin: auto;
   position: relative;
 }
-
-.authorize_wrap .form_body .authorize_form label * {
-  width: 100%;
-  margin: auto;
-}
-.authorize_wrap .form_body .authorize_form label p {
+.authorize_wrap .form_body .authorize_form label p{
+  position: absolute;
+  top: -7px; left: 13px;
   text-align: left;
+  cursor: text;
   margin: 0;
+  color: #929292;
   transition: .3s;
   font-weight: 400;
   padding: 5px;
   z-index: 20;
   font-size: 18px;
-}
-.authorize_wrap .form_body .authorize_form label:hover p{
-  
-}
-.authorize_wrap .form_body .authorize_form label .fuckyou{
-  z-index: 10000;
-  top: 20px;
-  transform: translateY(20px);
 }
 .authorize_wrap .form_body .btn{
   margin: 25px 0 0 0;
@@ -133,6 +128,7 @@ html body {
   background-color: #414141;
   color: #fff;
   cursor: pointer;
+  letter-spacing: 3px;
   border-bottom: 10px solid #333333;
 }
 .authorize_wrap .form_body .btn::after{
