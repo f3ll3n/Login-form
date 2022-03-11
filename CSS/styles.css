@@ -97,6 +97,14 @@ html body {
   margin: auto;
   position: relative;
 }
+.authorize_wrap .form_body .authorize_form label .alert-text{
+  position: absolute;
+  left: 20px;
+  font-weight: 400;
+  color: #ff3838e5;
+  opacity: 0;
+  font-size: 16px;
+}
 .authorize_wrap .form_body .authorize_form label p{
   position: absolute;
   top: -7px; left: 13px;
@@ -131,6 +139,7 @@ html body {
   letter-spacing: 3px;
   border-bottom: 10px solid #333333;
 }
+
 .authorize_wrap .form_body .btn::after{
   content: '';
   display: block;

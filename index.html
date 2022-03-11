@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <title>Авторизация</title>
 </head>
@@ -14,30 +14,30 @@
                 <h2>Авторизация</h2>
             </div>
             <div class="form_body">
-                <form class="authorize_form" action="get">
+                <div class="authorize_form">
                     <div class="input-wrap">
                         <label>
                             <p class="input-text">Введите имя</p>
-                            <input class="inpt" id="inputName" id="username" type="text" required>
+                            <input class="inpt" id="username" type="text">
+                            <span class="alert-text">Пользователь с этим именем не найден</span>
                         </label>
                     </div>
                     <div class="input-wrap">
                         <label>
                             <p class="input-text">Введите пароль</p>
-                            <input class="inpt" id="password" type="password" required>
+                            <input class="inpt" id="password" type="password">
+                            <span class="alert-text">Не верный пароль</span>
                         </label>
                     </div>
-                    <button class="btn">
+                    <button id="button" class="btn">
                         Log in
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-    <script src="JS/input-animate.js"></script>
+    <script src="JS/form.js"></script>
+    <script src="JS/Data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
-<!--Документация-->
-<!--1. Добавить JSON, через ООП реализовать проверку данных и успешное прохождение авторицации-->
-<!--2. Сверстать всплывающее окно, что авторизация пройдена успешно-->
