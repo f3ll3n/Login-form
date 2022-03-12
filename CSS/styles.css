@@ -97,13 +97,15 @@ html body {
   margin: auto;
   position: relative;
 }
-.authorize_wrap .form_body .authorize_form label .alert-text{
+.authorize_form  #alert-text{
   position: absolute;
-  left: 20px;
   font-weight: 400;
   color: #ff3838e5;
-  opacity: 0;
   font-size: 16px;
+  top: 20%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .authorize_wrap .form_body .authorize_form label p{
   position: absolute;
@@ -152,4 +154,36 @@ html body {
 }
 .authorize_wrap .form_body .btn:hover::after{
   width: 100%;
+}
+
+.authorize_form{
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: .3s;
+}
+#choice_form{
+  margin: 0 auto;
+  font-weight: 400;
+  text-align: center;
+}
+#choice_form h2{
+  font-weight: 400;
+  font-size: 20px;
+}
+#choice_form button{
+  font-size: 15px;
+  max-width: 200px;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  margin: 10px 0 10px 0;
+  transition: 0.3s;
+}
+#choice_form button:hover{
+  background-color: #333333;
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: #dad8d8;
 }

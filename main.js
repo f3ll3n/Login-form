@@ -1,25 +1,74 @@
-//Берём данные из form.js и Data.js
-let inputs = document.querySelectorAll('.authorize_form label .inpt');
-let submitButton = document.getElementById('button');
-let formInputArr = Array.from(inputs);
-let you = function getFormContent(content){
-    for(let i = 0; i < content.length; i++){
-        console.log(content[i].value);
+//Подтягиваем заголовок формы
+let title = document.querySelector('#form_title');
+let form = document.getElementById('form');
+//Переменные отражающие статус нынешнего окна
+let registration = false;
+let logIn = false;
+let buttonClick = document.querySelector('#logIn')
+
+//Статус окна - вход
+let func = function startLogIn(){
+        
+        let title = document.querySelector('#form_title');
+        title.innerHTML = 'Вход в учетную запись';
+        animateChoice()
+        logIn = true;
+        registration = false;
+        return logIn;
+}
+buttonClick.onclick = func;
+//document.querySelector('#logIn').onclick = function startLogIn(event){
+//    let title = document.querySelector('#form_title');
+//    title.innerHTML = 'Вход в учетную запись';
+//    animateChoice()
+//    logIn = true;
+//    registration = false;
+//    console.log(logIn);
+//}
+//Статус окна - регистрация
+document.querySelector('#registration').onclick = function startRegistration(event){
+    let title = document.querySelector('#form_title');
+    title.innerHTML = 'Регистрация';
+    animateChoice();
+    registration = true;
+    logIn = false;
+}
+
+let alertText = document.querySelector('#alert-text');
+let userName;
+let userPassword;
+//sing up
+//Функция, которая в зависимости от статуса окна, либо регистрирует, либо сверяет данные для входа
+document.querySelector('#button').onclick = function(event){
+    event.preventDefault();
+    console.log('work');
+    console.log('regist ' + registration + ';' + 'login ' + logIn);
+    let user = document.querySelector('#username').value;
+    let pass = document.querySelector('#password').value;
+    if (registration == true){
+        if(String(pass.length) > 4 ){
+            userName = user;
+            userPassword = pass;
+            form.reset();
+            textInForm();
+            func();
+        }
+        else{
+            console.log('Слишком короткий пароль!');
+        }
+    } 
+    else if(logIn == true || func == true){
+
+            if(pass == userPassword){
+                if(String(user == userName)){
+                    console.log('Вы вошли успешно');
+                }
+                else{
+                }
+            }
+        else{
+            alertText.innerHTML = 'Не правильное имя, или пароль';
+            
+        }
     }
 }
-submitButton.addEventListener('click', () =>{you(formInputArr);});
-
-
-let DataObjects = JSONData.data;
-
-
-function submitForm(event){
-    event.preventDefault();
-    window.history.back();
-  }
-function validateForm(array){
-   //array.filter(item =>{
-   //     if()
-   // })
-}
-//validateForm(DataObject)

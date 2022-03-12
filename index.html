@@ -11,28 +11,42 @@
     <div class="wrap">
         <div class="authorize_wrap">
             <div class="form_title">
-                <h2>Авторизация</h2>
+                <h2 id="form_title">Авторизация</h2>
             </div>
             <div class="form_body">
-                <div class="authorize_form">
+                <div id="choice_form">
+                    <div>
+                        <button id="registration">
+                            Зарегистрироваться
+                        </button>
+                        <button id="logIn">
+                            Войти
+                        </button>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                
+                <form method="POST" class="authorize_form" id="form">
+                    <span id="alert-text"></span>
                     <div class="input-wrap">
                         <label>
                             <p class="input-text">Введите имя</p>
-                            <input class="inpt" id="username" type="text">
-                            <span class="alert-text">Пользователь с этим именем не найден</span>
+                            <input class="inpt" id="username" type="text" name="username">
+                            
                         </label>
                     </div>
                     <div class="input-wrap">
                         <label>
                             <p class="input-text">Введите пароль</p>
-                            <input class="inpt" id="password" type="password">
-                            <span class="alert-text">Не верный пароль</span>
+                            <input class="inpt" id="password" type="password" name="password">
                         </label>
                     </div>
                     <button id="button" class="btn">
                         Log in
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
