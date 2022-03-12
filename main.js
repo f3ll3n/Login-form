@@ -17,15 +17,7 @@ let func = function startLogIn(){
         return logIn;
 }
 buttonClick.onclick = func;
-//document.querySelector('#logIn').onclick = function startLogIn(event){
-//    let title = document.querySelector('#form_title');
-//    title.innerHTML = 'Вход в учетную запись';
-//    animateChoice()
-//    logIn = true;
-//    registration = false;
-//    console.log(logIn);
-//}
-//Статус окна - регистрация
+
 document.querySelector('#registration').onclick = function startRegistration(event){
     let title = document.querySelector('#form_title');
     title.innerHTML = 'Регистрация';
@@ -61,13 +53,13 @@ document.querySelector('#button').onclick = function(event){
 
             if(pass == userPassword){
                 if(String(user == userName)){
-                    console.log('Вы вошли успешно');
+                    alert('Вы вошли успешно');
                 }
                 else{
                 }
             }
         else{
-            alertText.innerHTML = 'Не правильное имя, или пароль';
+            alertText.innerHTML = 'Неправильное имя, или пароль';
             
         }
     }
