@@ -46,7 +46,7 @@ function animateSuccessForm(){
   successForm.style.opacity = '1'
   successForm.style.height = '170px';
   let authorizeForm = document.querySelector('.authorize_form');
-  alertText.fontSize = '0px';
+  
   authorizeForm.style.height = '0px';
   
   successForm.style.transition = '.3s';

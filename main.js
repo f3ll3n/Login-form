@@ -39,15 +39,19 @@ document.querySelector('#button').onclick = function(event){
     let user = document.querySelector('#username').value;
     let pass = document.querySelector('#password').value;
     if (registration == true){
-        if(String(pass.length) > 4 ){
+        if((pass.length > 4) && (user != '')){
+            alertText.innerHTML = '';
             userName = user;
             userPassword = pass;
             form.reset();
             textInForm();
             func();
         }
-        else{
-            console.log('Слишком короткий пароль!');
+        else if (user == false){
+            alertText.innerHTML = 'Введите имя';
+        }
+        else if (pass.length < 4){
+            alertText.innerHTML = 'Короткий пароль';
         }
     } 
     else if(logIn == true || func == true){
