@@ -35,10 +35,21 @@ let formMethod = arrFormText.map(el =>{
 })
 
 function animateChoice(){
-  document.querySelector('.authorize_form').style.opacity = '1';
-  document.querySelector('.authorize_form').style.height = '288px';
-  document.querySelector('.authorize_form').style.transition = '';
-  document.querySelector('#choice_form').style.display = 'none';
+  let authorizeForm = document.querySelector('.authorize_form');
+  authorizeForm.style.opacity = '1';
+  authorizeForm.style.height = '288px';
+  authorizeForm.style.transition = '';
+  document.getElementById('choice_form').style.display = 'none';
+}
+function animateSuccessForm(){
+  const successForm = document.getElementById('success_form');
+  successForm.style.opacity = '1'
+  successForm.style.height = '170px';
+  let authorizeForm = document.querySelector('.authorize_form');
+  alertText.fontSize = '0px';
+  authorizeForm.style.height = '0px';
+  
+  successForm.style.transition = '.3s';
 }
 //Берём данные из формы
 //let form = document.querySelector()

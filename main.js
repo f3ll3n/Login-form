@@ -22,6 +22,7 @@ document.querySelector('#registration').onclick = function startRegistration(eve
     let title = document.querySelector('#form_title');
     title.innerHTML = 'Регистрация';
     animateChoice();
+    console.log('work');
     registration = true;
     logIn = false;
 }
@@ -53,7 +54,9 @@ document.querySelector('#button').onclick = function(event){
 
             if(pass == userPassword){
                 if(String(user == userName)){
-                    alert('Вы вошли успешно');
+                    title.innerHTML = 'Вы вошли успешно';
+                    alertText.style.fontSize = '0px';
+                    animateSuccessForm();
                 }
                 else{
                 }
